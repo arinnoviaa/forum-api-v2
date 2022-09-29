@@ -3,6 +3,8 @@ const AuthenticationError = require('../../../Commons/exceptions/AuthenticationE
 const BcryptEncryptionHelper = require('../BcryptPasswordHash');
 
 describe('BcryptEncryptionHelper', () => {
+  beforeEach(() => jest.setTimeout(10000));
+
   describe('hash function', () => {
     it('should encrypt password correctly', async () => {
       // Arrange
